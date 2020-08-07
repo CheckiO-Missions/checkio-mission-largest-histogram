@@ -11,5 +11,5 @@ api.add_listener(
         tests=TESTS,
         function_name={
             "python": "largest_histogram",
-            "js": "mostWanted"
+            "js": "largestHistogram"
         }).on_ready)
