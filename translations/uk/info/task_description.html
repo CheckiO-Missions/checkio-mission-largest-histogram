@@ -1,0 +1,40 @@
+<img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
+<p class="story" style="text-align: right">
+"Вашу здатність вибирати ніколи не можна відібрати у вас. <br>
+Нею можна нехтувати, її можна ігнорувати. <br>
+Але якщо нею скористатися, вона може змінити все"<br>
+- Стів Гудієр
+</p>
+
+<p>
+    У вас є гістограма. Спробуйте знайти розмір найбільшого прямокутника, який можна побудувати зі стовпчиків гістограми.
+</p>
+
+<p style="text-align: center;"><img src="{{MEDIA}}schema.png" style="max-height: 334px">
+
+<p><strong>Вхідні дані: </strong>{% if interpreter.slug == "js-node" %}Масив{% else %}Список{% endif %} всіх висот прямокутників на гістограмі.</p>
+
+<p><strong>Вихідні дані: </strong>Площа найбільшого прямокутника.</p>
+    <p><strong>Приклад:</strong></p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">largestHistogram([5]) == 5
+largestHistogram([5, 3]) == 6
+largestHistogram([1, 1, 4, 1]) == 4
+largestHistogram([1, 1, 3, 1]) == 4
+largestHistogram([2, 1, 4, 5, 1, 3, 3]) == 8
+</pre>
+{% else %}
+<pre class="brush: python">largest_histogram([5]) == 5
+largest_histogram([5, 3]) == 6
+largest_histogram([1, 1, 4, 1]) == 4
+largest_histogram([1, 1, 3, 1]) == 4
+largest_histogram([2, 1, 4, 5, 1, 3, 3]) == 8
+</pre>
+{% endif %}
+
+<p><strong>Як використовується: </strong>Розв'язок, який ви отримаєте, навряд чи буде корисним у реальному житті. Тому просто розважайтесь!</p>
+
+<p><strong>Умова:</strong><br>
+    0 &lt; len(data) &lt; 1000<br>
+</p>
